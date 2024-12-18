@@ -38,7 +38,7 @@ function App() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full h-12 flex justify-center z-10 bg-white">
+      <header className="fixed top-2 left-0 w-full h-12 flex justify-center z-10 bg-white">
         <nav className="flex flex-row justify-between items-center bg-zinc-200/50 w-[520px] rounded-2xl">
           {sections.map(({ id, name }) => (
             <a
