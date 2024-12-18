@@ -53,7 +53,7 @@ function App() {
           ))}
         </nav>
       </header>
-      <div className="pt-14 h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth">
+      <div className="pt-14 h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth scrollbar-hide">
         {sections.map(({ id, name }, index) => (
           <section
             id={id}
