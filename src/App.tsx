@@ -38,8 +38,8 @@ function App() {
 
   return (
     <>
-      <header className="fixed top-2 left-0 w-full h-12 flex justify-center z-10 bg-white">
-        <nav className="flex flex-row justify-between items-center bg-zinc-200/50 w-[520px] rounded-2xl">
+      <header className="fixed top-2 left-0 w-full h-12 flex justify-center z-10">
+        <nav className="flex flex-row justify-between items-center bg-zinc-200/50 backdrop-blur w-[520px] rounded-2xl border border-black">
           {sections.map(({ id, name }) => (
             <a
               key={id}
@@ -53,7 +53,7 @@ function App() {
           ))}
         </nav>
       </header>
-      <div className="pt-14 h-screen overflow-y-scroll snap-y snap-mandatory">
+      <div className="pt-14 h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth">
         {sections.map(({ id, name }, index) => (
           <section
             id={id}
