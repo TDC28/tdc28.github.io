@@ -53,14 +53,13 @@ function App() {
           ))}
         </nav>
       </header>
-
-      <div className="pt-14">
+      <div className="pt-14 h-screen overflow-y-scroll snap-y snap-mandatory">
         {sections.map(({ id, name }, index) => (
           <section
             id={id}
             key={id}
             ref={(el) => (sectionRefs.current[index] = el)}
-            className="min-h-screen flex items-center justify-center border-b-2"
+            className="section"
           >
             <h1 className="text-4xl">{name}</h1>
           </section>
