@@ -54,16 +54,65 @@ function App() {
         </nav>
       </header>
       <div className="pt-14 h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth scrollbar-hide">
-        {sections.map(({ id, name }, index) => (
-          <section
-            id={id}
-            key={id}
-            ref={(el) => (sectionRefs.current[index] = el)}
-            className="section"
-          >
-            <h1 className="text-4xl">{name}</h1>
-          </section>
-        ))}
+        <section
+          id="home"
+          ref={(el) => (sectionRefs.current[0] = el)}
+          className="section"
+        >
+          <div className="flex flex-row w-full justify-around items-center">
+            <div className="flex flex-col p-4 max-w-[720px]">
+              <h1 className="text-7xl font-kumbh font-bold">
+                Alexandre Boutot
+              </h1>
+              <p className="text-2xl font-kumbh">
+                Mathematical Physics student at the University of Waterloo
+              </p>
+              <p className="pt-4">
+                Lorem ipsum odor amet, consectetuer adipiscing elit. Habitasse
+                ac ex volutpat leo eu risus torquent sagittis sodales. Magna sem
+                tortor ullamcorper maximus ante praesent. Fusce nibh nibh mauris
+                aliquet ultrices ultricies; pretium inceptos faucibus. Etiam
+                mattis dictum posuere morbi leo nam. Gravida in odio maecenas
+                mollis quam urna malesuada augue habitasse. Vitae eros mollis
+                ultricies montes magna. Pulvinar tempor volutpat in vitae velit
+                arcu taciti. Semper leo curabitur venenatis facilisis cras
+                habitant.
+              </p>
+            </div>
+
+            <div className="min-w-96 min-h-[550px] border rounded-2xl text-center">
+              Picture
+            </div>
+          </div>
+        </section>
+        <section
+          id="experience"
+          ref={(el) => (sectionRefs.current[1] = el)}
+          className="section"
+        >
+          <h1 className="text-4xl">Experience</h1>
+        </section>
+        <section
+          id="projects"
+          ref={(el) => (sectionRefs.current[2] = el)}
+          className="section"
+        >
+          <h1 className="text-4xl">Projects</h1>
+        </section>
+        <section
+          id="publications"
+          ref={(el) => (sectionRefs.current[3] = el)}
+          className="section"
+        >
+          <h1 className="text-4xl">Publications</h1>
+        </section>
+        <section
+          id="contact"
+          ref={(el) => (sectionRefs.current[4] = el)}
+          className="section"
+        >
+          <h1 className="text-4xl">Contact</h1>
+        </section>
       </div>
     </>
   );

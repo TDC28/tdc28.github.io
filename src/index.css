@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Kumbh Sans";
+  src: url("/src/assets/fonts/KumbhSans-Regular.ttf") format("truetype");
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+
 .section {
-  @apply snap-start flex items-center justify-center h-screen;
+  @apply snap-start h-screen flex items-center;
 }
