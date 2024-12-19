@@ -44,7 +44,7 @@ function App() {
             <a
               key={id}
               href={`#${id}`}
-              className={`px-4 py-2 text-gray-600 ${
+              className={`px-4 py-2 text-gray-600 transition-all duration-200 ${
                 activeSection === id ? "font-bold" : "tracking-wide"
               }`}
             >
@@ -57,7 +57,7 @@ function App() {
         <section
           id="home"
           ref={(el) => (sectionRefs.current[0] = el)}
-          className="section"
+          className="snap-start h-screen flex items-center"
         >
           <div className="flex flex-row w-full justify-around items-center">
             <div className="flex flex-col p-4 max-w-[720px]">
@@ -79,19 +79,42 @@ function App() {
                 habitant.
               </p>
             </div>
-
             <div className="min-w-96 min-h-[550px] border rounded-2xl text-center">
               Picture
             </div>
           </div>
         </section>
+
         <section
           id="experience"
           ref={(el) => (sectionRefs.current[1] = el)}
-          className="section"
+          className="snap-start h-screen flex flex-col items-start justify-start p-6"
         >
-          <h1 className="text-4xl">Experience</h1>
+          <h1 className="font-kumbh text-4xl mb-6">Experience</h1>
+          <div className="flex-grow flex items-center justify-center w-full">
+            <div className="snap-x flex gap-6 overflow-x-scroll w-full max-w-4xl px-4 py-6">
+              <div className="snap-center border rounded-xl w-64 h-40 flex items-center justify-center">
+                Job 1
+              </div>
+              <div className="snap-center border rounded-xl w-64 h-40 flex items-center justify-center">
+                Job 2
+              </div>
+              <div className="snap-center border rounded-xl w-64 h-40 flex items-center justify-center">
+                Job 3
+              </div>
+              <div className="snap-center border rounded-xl w-64 h-40 flex items-center justify-center">
+                Job 4
+              </div>
+              <div className="snap-center border rounded-xl w-64 h-40 flex items-center justify-center">
+                Job 5
+              </div>
+              <div className="snap-center border rounded-xl w-64 h-40 flex items-center justify-center">
+                Job 6
+              </div>
+            </div>
+          </div>
         </section>
+
         <section
           id="projects"
           ref={(el) => (sectionRefs.current[2] = el)}
@@ -99,6 +122,7 @@ function App() {
         >
           <h1 className="text-4xl">Projects</h1>
         </section>
+
         <section
           id="publications"
           ref={(el) => (sectionRefs.current[3] = el)}
@@ -106,6 +130,7 @@ function App() {
         >
           <h1 className="text-4xl">Publications</h1>
         </section>
+
         <section
           id="contact"
           ref={(el) => (sectionRefs.current[4] = el)}
