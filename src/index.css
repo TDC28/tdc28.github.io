@@ -12,3 +12,7 @@
 .section {
   @apply snap-start h-screen flex;
 }
+
+.contact-link {
+  @apply rounded-3xl w-32 flex justify-around items-center bg-white border border-black hover:shadow-lg transition-all duration-300;
+}

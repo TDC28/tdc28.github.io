@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Linkedin, Github, Mail } from "lucide-react";
 import Job from "./components/job";
 
 const sections = [
@@ -13,7 +14,6 @@ const jobs = [
   {
     name: "Institute for Quantum Computing",
     role: "Research Assistant",
-    location: "Waterloo, ON",
     start: "January 2025",
     end: "May 2025",
     details: "Worked under Dr. Dmitry Pushin.",
@@ -37,7 +37,7 @@ function App() {
       {
         root: null,
         rootMargin: "0px",
-        threshold: 0.6,
+        threshold: 0.8,
       },
     );
 
@@ -108,26 +108,22 @@ function App() {
         >
           <h1 className="font-kumbh text-4xl mb-6">Experience</h1>
           <p>
-            Here are all my completed work terms and what I've done in each one
-            of them.
+            Here are my completed co-op work terms and what I've done in each
           </p>
           <div className="flex-grow flex items-center justify-center w-full">
             <div className="grid grid-cols-2 gap-8">
               <div className="border p-2 rounded-xl w-96 h-60 hover:shadow-xl transition-all duration-300 bg-zinc-100"></div>
 
-              {jobs.map(
-                ({ name, role, location, start, end, details, image }) => (
-                  <Job
-                    name={name}
-                    role={role}
-                    location={location}
-                    start={start}
-                    end={end}
-                    details={details}
-                    image={image}
-                  />
-                ),
-              )}
+              {jobs.map(({ name, role, start, end, details, image }) => (
+                <Job
+                  name={name}
+                  role={role}
+                  start={start}
+                  end={end}
+                  details={details}
+                  image={image}
+                />
+              ))}
             </div>
           </div>
         </section>
@@ -143,9 +139,35 @@ function App() {
         <section
           id="contact"
           ref={(el) => (sectionRefs.current[3] = el)}
-          className="section"
+          className="snap-start flex h-1/4 bg-zinc-50 rounded-tl-3xl rounded-tr-full items-center w-2/3"
         >
-          <h1 className="text-4xl">Contact</h1>
+          <h1 className="text-4xl font-kumbh ml-10 min-w-56">Contact</h1>
+          <div className="flex flex-row gap-4 w-full">
+            <a
+              href="mailto:alexandreboutot@icloud.com"
+              className="contact-link"
+            >
+              <div className="flex flex-row pt-2 pb-2">
+                <Mail className="mr-2" />
+                <p className="font-kumbh">Email</p>
+              </div>
+            </a>
+            <a href="https://github.com/TDC28" className="contact-link">
+              <div className="flex flex-row p-2">
+                <Github className="mr-2" />
+                <p className="font-kumbh">GitHub</p>
+              </div>
+            </a>
+            <a
+              href="https://linkedin.com/in/alexandreboutot"
+              className="contact-link"
+            >
+              <div className="flex flex-row p-2">
+                <Linkedin className="mr-2" />
+                <p className="font-kumbh">LinkedIn</p>
+              </div>
+            </a>
+          </div>
         </section>
       </div>
     </>

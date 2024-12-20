@@ -3,7 +3,6 @@ import React from "react";
 type JobProps = {
   name: string;
   role: string;
-  location: string;
   start: string;
   end: string;
   details: string;
@@ -13,7 +12,6 @@ type JobProps = {
 const Job: React.FC<JobProps> = ({
   name,
   role,
-  location,
   start,
   end,
   details,
@@ -29,7 +27,6 @@ const Job: React.FC<JobProps> = ({
         {start} - {end}
       </p>
       <p className="tracking-wide">{name}</p>
-      <p className="tracking-wide">{location}</p>
     </div>
   );
 };
