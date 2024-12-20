@@ -6,7 +6,7 @@ const sections = [
   { name: "Home", id: "home" },
   { name: "Experience", id: "experience" },
   { name: "Projects", id: "projects" },
-  //{ name: "Publications", id: "publications" },
+  { name: "Publications", id: "publications" },
   { name: "Contact", id: "contact" },
 ];
 
@@ -16,8 +16,20 @@ const jobs = [
     role: "Research Assistant",
     start: "January 2025",
     end: "May 2025",
-    details: "Worked under Dr. Dmitry Pushin.",
+    location: "Waterloo, ON",
+    details:
+      "Lorem ipsum odor amet, consectetuer adipiscing elit. Habitasseac ex volutpat leo eu risus torquent sagittis sodales. Magna semtortor ullamcorper maximus ante praesent.",
     image: "/iqc.png",
+  },
+  {
+    name: "Shediac Tennis Club",
+    role: "Senior Coordinator",
+    start: "May 2024",
+    end: "September 2024",
+    location: "Shediac, NB",
+    details:
+      "Lorem ipsum odor amet, consectetuer adipiscing elit. Habitasseac ex volutpat leo eu risus torquent sagittis sodales. Magna semtortor ullamcorper maximus ante praesent.",
+    image: "/stc.png",
   },
 ];
 
@@ -106,24 +118,30 @@ function App() {
           ref={(el) => (sectionRefs.current[1] = el)}
           className="snap-start h-screen flex flex-col items-start justify-start p-6"
         >
-          <h1 className="font-kumbh text-4xl mb-6">Experience</h1>
-          <p>
-            Here are my completed co-op work terms and what I've done in each
-          </p>
-          <div className="flex-grow flex items-center justify-center w-full">
-            <div className="grid grid-cols-2 gap-8">
-              <div className="border p-2 rounded-xl w-96 h-60 hover:shadow-xl transition-all duration-300 bg-zinc-100"></div>
+          <div className="flex-grow flex items-center justify-around w-full h-screen">
+            <div className="max-w-96 h-screen flex flex-col justify-center">
+              <h1 className="font-kumbh text-4xl mb-6">Experience</h1>
+              <p>
+                Here is the work experience I gained since starting my journey
+                at Waterloo!
+              </p>
+            </div>
 
-              {jobs.map(({ name, role, start, end, details, image }) => (
-                <Job
-                  name={name}
-                  role={role}
-                  start={start}
-                  end={end}
-                  details={details}
-                  image={image}
-                />
-              ))}
+            <div className="flex flex-col gap-8">
+              <div className="border p-2 rounded-xl w-96 h-60 hover:shadow-xl transition-all duration-300 bg-zinc-100"></div>
+              {jobs.map(
+                ({ name, role, start, end, location, details, image }) => (
+                  <Job
+                    name={name}
+                    role={role}
+                    start={start}
+                    end={end}
+                    location={location}
+                    details={details}
+                    image={image}
+                  />
+                ),
+              )}
             </div>
           </div>
         </section>
@@ -133,12 +151,20 @@ function App() {
           ref={(el) => (sectionRefs.current[2] = el)}
           className="section"
         >
-          <h1 className="text-4xl">Projects</h1>
+          <h1 className="font-kumbh text-4xl">Projects</h1>
+        </section>
+
+        <section
+          id="publications"
+          ref={(el) => (sectionRefs.current[3] = el)}
+          className="section"
+        >
+          <h1 className="font-kumbh text-4xl">Publications</h1>
         </section>
 
         <section
           id="contact"
-          ref={(el) => (sectionRefs.current[3] = el)}
+          ref={(el) => (sectionRefs.current[4] = el)}
           className="snap-start flex h-1/4 bg-zinc-50 rounded-tl-3xl rounded-tr-full items-center w-2/3"
         >
           <h1 className="text-4xl font-kumbh ml-10 min-w-56">Contact</h1>
