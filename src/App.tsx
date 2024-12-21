@@ -14,22 +14,29 @@ const jobs = [
   {
     name: "Institute for Quantum Computing",
     role: "Research Assistant",
-    start: "January 2025",
+    start: "Jan",
     end: "May 2025",
     location: "Waterloo, ON",
     details:
       "Lorem ipsum odor amet, consectetuer adipiscing elit. Habitasseac ex volutpat leo eu risus torquent sagittis sodales. Magna semtortor ullamcorper maximus ante praesent.",
-    image: "/iqc.png",
+  },
+  {
+    name: "UW Physics Tutorial Centre",
+    role: "Volunteer Tutor",
+    start: "Sep",
+    end: "Dec 2024",
+    location: "Waterloo, ON",
+    details:
+      "Provided academic support to University of Waterloo students through one-on-one and group tutoring sessions at the Physics Tutorial Center. Assisted students in mastering concepts across first-year courses in computer science, mathematics, and physics. Empowered students to enhance problem-solving skills and achieve academic success.",
   },
   {
     name: "Shediac Tennis Club",
     role: "Senior Coordinator",
-    start: "May 2024",
-    end: "September 2024",
+    start: "May",
+    end: "Sep 2024",
     location: "Shediac, NB",
     details:
       "Lorem ipsum odor amet, consectetuer adipiscing elit. Habitasseac ex volutpat leo eu risus torquent sagittis sodales. Magna semtortor ullamcorper maximus ante praesent.",
-    image: "/stc.png",
   },
 ];
 
@@ -116,33 +123,31 @@ function App() {
         <section
           id="experience"
           ref={(el) => (sectionRefs.current[1] = el)}
-          className="snap-start h-screen flex flex-col items-start justify-start p-6"
+          className="snap-start h-screen flex flex-row items-center justify-center"
         >
-          <div className="flex-grow flex items-center justify-around w-full h-screen">
-            <div className="max-w-96 h-screen flex flex-col justify-center">
-              <h1 className="font-kumbh text-4xl mb-6">Experience</h1>
-              <p>
+          <div className="flex w-1/3 items-center">
+            <div className="left-0 h-full flex flex-col items-center justify-center p-8">
+              <h1 className="font-kumbh text-4xl mb-2">Experience</h1>
+              <p className="max-w-96 text-center">
                 Here is the work experience I gained since starting my journey
                 at Waterloo!
               </p>
             </div>
-
-            <div className="flex flex-col gap-8">
-              <div className="border p-2 rounded-xl w-96 h-60 hover:shadow-xl transition-all duration-300 bg-zinc-100"></div>
-              {jobs.map(
-                ({ name, role, start, end, location, details, image }) => (
-                  <Job
-                    name={name}
-                    role={role}
-                    start={start}
-                    end={end}
-                    location={location}
-                    details={details}
-                    image={image}
-                  />
-                ),
-              )}
-            </div>
+          </div>
+          <div
+            className="h-[600px] rounded-xl flex flex-col gap-2 overflow-y-scroll snap-y snap-mandatory p-6 items-center scrollbar-hide border border-black" // bg-gray-100 border-black
+            style={{ scrollPaddingTop: "1rem" }}
+          >
+            {jobs.map(({ name, role, start, end, location, details }) => (
+              <Job
+                name={name}
+                role={role}
+                start={start}
+                end={end}
+                location={location}
+                details={details}
+              />
+            ))}
           </div>
         </section>
 
