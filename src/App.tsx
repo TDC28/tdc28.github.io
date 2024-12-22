@@ -17,8 +17,7 @@ const jobs = [
     start: "Jan",
     end: "May 2025",
     location: "Waterloo, ON",
-    details:
-      "Lorem ipsum odor amet, consectetuer adipiscing elit. Habitasseac ex volutpat leo eu risus torquent sagittis sodales. Magna semtortor ullamcorper maximus ante praesent.",
+    details: "",
   },
   {
     name: "UW Physics Tutorial Centre",
@@ -27,7 +26,7 @@ const jobs = [
     end: "Dec 2024",
     location: "Waterloo, ON",
     details:
-      "Provided academic support to University of Waterloo students through one-on-one and group tutoring sessions at the Physics Tutorial Center. Assisted students in mastering concepts across first-year courses in computer science, mathematics, and physics. Empowered students to enhance problem-solving skills and achieve academic success.",
+      "Provided academic support to University of Waterloo students through one-on-one and group tutoring sessions at the Physics Tutorial Center. Assisted students in mastering concepts across first-year courses in computer science, physics, and mathematics. Empowered students to enhance problem-solving skills and achieve academic success.",
   },
   {
     name: "Shediac Tennis Club",
@@ -36,7 +35,7 @@ const jobs = [
     end: "Sep 2024",
     location: "Shediac, NB",
     details:
-      "Lorem ipsum odor amet, consectetuer adipiscing elit. Habitasseac ex volutpat leo eu risus torquent sagittis sodales. Magna semtortor ullamcorper maximus ante praesent.",
+      "Supervised employees at the Shediac Tennis Club, fostering a collaborative and productive work environment. Built programming tools to automate employee tasks, improving efficiency in daily operations. Contributed to the design and launch of the club's new website while ensuring exceptional service delivery to all members.",
   },
 ];
 
@@ -98,18 +97,15 @@ function App() {
                 Alexandre Boutot
               </h1>
               <p className="text-2xl font-kumbh">
-                Mathematical Physics student at the University of Waterloo
+                Mathematical Physics Student at the University of Waterloo
               </p>
               <p className="pt-4">
-                Lorem ipsum odor amet, consectetuer adipiscing elit. Habitasse
-                ac ex volutpat leo eu risus torquent sagittis sodales. Magna sem
-                tortor ullamcorper maximus ante praesent. Fusce nibh nibh mauris
-                aliquet ultrices ultricies; pretium inceptos faucibus. Etiam
-                mattis dictum posuere morbi leo nam. Gravida in odio maecenas
-                mollis quam urna malesuada augue habitasse. Vitae eros mollis
-                ultricies montes magna. Pulvinar tempor volutpat in vitae velit
-                arcu taciti. Semper leo curabitur venenatis facilisis cras
-                habitant.
+                I’m passionate about exploring the intersections of physics,
+                mathematics, and technology to create practical solutions from
+                theoretical ideas. When I’m not immersed in academics, you’ll
+                find me on the tennis court or working on projects that combine
+                cutting-edge quantum concepts with real-world applications.
+                Scroll down to see what I’ve been working on!
               </p>
             </div>
             <img
@@ -129,7 +125,7 @@ function App() {
             <div className="left-0 h-full flex flex-col items-center justify-center p-8">
               <h1 className="font-kumbh text-4xl mb-2">Experience</h1>
               <p className="max-w-96 text-center">
-                Here is the work experience I gained since starting my journey
+                Here is the work experience I gained since I started my journey
                 at Waterloo!
               </p>
             </div>
