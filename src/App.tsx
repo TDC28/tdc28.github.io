@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Linkedin, Github, Mail } from "lucide-react";
 import Job from "./components/job";
+import Project from "./components/project";
 
 const sections = [
   { name: "Home", id: "home" },
@@ -38,6 +39,21 @@ const jobs = [
       "Supervised employees at the Shediac Tennis Club, fostering a collaborative and productive work environment. Built programming tools to automate employee tasks, improving efficiency in daily operations. Contributed to the design and launch of the club's new website while ensuring exceptional service delivery to all members.",
   },
 ];
+
+const projects = [
+  {
+    name: "Qalendar",
+    details: "Somestuff",
+    link: "https://github.com/TDC28/Qalendar.git",
+  },
+  {
+    name: "QuViz",
+    details: "Somestuff2",
+    link: "https://github.com/RasmitDevkota/QuViz.git",
+  },
+];
+
+const publications = [];
 
 function App() {
   const [activeSection, setActiveSection] = useState("home");
@@ -100,12 +116,12 @@ function App() {
                 Mathematical Physics Student at the University of Waterloo
               </p>
               <p className="pt-4">
-                I’m passionate about exploring the intersections of physics,
-                mathematics, and technology to create practical solutions from
-                theoretical ideas. When I’m not immersed in academics, you’ll
-                find me on the tennis court or working on projects that combine
-                cutting-edge quantum concepts with real-world applications.
-                Scroll down to see what I’ve been working on!
+                I’m passionate about exploring physics, mathematics, and
+                technology to create practical solutions from theoretical ideas.
+                When I’m not immersed in academics, you’ll find me on the tennis
+                court or working on projects that combine cutting-edge quantum
+                concepts with real-world applications. Scroll down to see what
+                I’ve been working on!
               </p>
             </div>
             <img
@@ -152,7 +168,21 @@ function App() {
           ref={(el) => (sectionRefs.current[2] = el)}
           className="section"
         >
-          <h1 className="font-kumbh text-4xl">Projects</h1>
+          <div className="flex w-1/3 items-center">
+            <div className="left-0 h-full flex flex-col items-center justify-center p-8">
+              <h1 className="font-kumbh text-4xl mb-2">Projects</h1>
+              <p className="max-w-96 text-center">
+                Here is the work experience I gained since I started my journey
+                at Waterloo!
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-row gap-4 self-center">
+            {projects.map(({ name, details, link }) => (
+              <Project link={link} name={name} details={details} />
+            ))}
+          </div>
         </section>
 
         <section
