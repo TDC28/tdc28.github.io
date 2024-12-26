@@ -45,11 +45,13 @@ const projects = [
     name: "Qalendar",
     details: "Somestuff",
     link: "https://github.com/TDC28/Qalendar.git",
+    tools: ["Python", "TypeScript", "TailwindCSS", "Vite"],
   },
   {
     name: "QuViz",
     details: "Somestuff2",
     link: "https://github.com/RasmitDevkota/QuViz.git",
+    tools: ["Python", "Qiskit", "tkinter"],
   },
 ];
 
@@ -87,7 +89,7 @@ function App() {
   return (
     <>
       <header className="fixed top-2 left-0 w-full h-12 flex justify-center z-10">
-        <nav className="flex flex-row justify-between items-center bg-zinc-200/50 backdrop-blur w-[520px] rounded-2xl border border-black">
+        <nav className="flex flex-row justify-between items-center bg-white/80 backdrop-blur w-[520px] rounded-2xl border border-black">
           {sections.map(({ name, id }) => (
             <a
               key={id}
@@ -105,7 +107,7 @@ function App() {
         <section
           id="home"
           ref={(el) => (sectionRefs.current[0] = el)}
-          className="snap-start h-screen flex items-center"
+          className="snap-start h-screen flex items-center bg-gray-100"
         >
           <div className="flex flex-row w-full justify-around items-center">
             <div className="flex flex-col p-4 max-w-[720px]">
@@ -135,7 +137,7 @@ function App() {
         <section
           id="experience"
           ref={(el) => (sectionRefs.current[1] = el)}
-          className="snap-start h-screen flex flex-row items-center justify-center"
+          className="snap-start h-screen flex flex-row items-center justify-center bg-gray-100"
         >
           <div className="flex w-1/3 items-center">
             <div className="left-0 h-full flex flex-col items-center justify-center p-8">
@@ -147,7 +149,7 @@ function App() {
             </div>
           </div>
           <div
-            className="h-[600px] rounded-xl flex flex-col gap-2 overflow-y-scroll snap-y snap-mandatory p-6 items-center scrollbar-hide border border-black" // bg-gray-100 border-black
+            className="bg-white h-[550px] rounded-xl flex flex-col gap-2 overflow-y-scroll snap-y snap-mandatory p-6 items-center scrollbar-hide border border-black"
             style={{ scrollPaddingTop: "1rem" }}
           >
             {jobs.map(({ name, role, start, end, location, details }) => (
@@ -166,22 +168,28 @@ function App() {
         <section
           id="projects"
           ref={(el) => (sectionRefs.current[2] = el)}
-          className="section"
+          className="section bg-gray-100 rounded-2xl"
         >
           <div className="flex w-1/3 items-center">
             <div className="left-0 h-full flex flex-col items-center justify-center p-8">
               <h1 className="font-kumbh text-4xl mb-2">Projects</h1>
               <p className="max-w-96 text-center">
-                Here is the work experience I gained since I started my journey
-                at Waterloo!
+                Here are some of the things I have been working on recently.
               </p>
             </div>
           </div>
 
-          <div className="flex flex-row gap-4 self-center">
-            {projects.map(({ name, details, link }) => (
-              <Project link={link} name={name} details={details} />
-            ))}
+          <div className="w-2/3 self-center">
+            <div className="flex flex-col gap-4 pr-10">
+              {projects.map(({ name, details, link, tools }) => (
+                <Project
+                  link={link}
+                  name={name}
+                  details={details}
+                  tools={tools}
+                />
+              ))}
+            </div>
           </div>
         </section>
 
@@ -196,7 +204,7 @@ function App() {
         <section
           id="contact"
           ref={(el) => (sectionRefs.current[4] = el)}
-          className="snap-start flex h-1/4 bg-zinc-50 rounded-tl-3xl rounded-tr-full items-center w-2/3"
+          className="snap-start flex h-1/4 bg-gray-100 rounded-tl-3xl rounded-tr-full items-center w-2/3"
         >
           <h1 className="text-4xl font-kumbh ml-10 min-w-56">Contact</h1>
           <div className="flex flex-row gap-4 w-full">
