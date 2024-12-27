@@ -44,7 +44,7 @@ const projects = [
     name: "Qalendar",
     details: "Calendar generator powered by quantum annealing.",
     link: "https://github.com/TDC28/Qalendar.git",
-    tools: ["Python", "Django", "TypeScript", "TailwindCSS", "Vite"],
+    tools: ["Python", "Django", "TypeScript", "D-Wave Ocean"],
   },
   {
     name: "QuViz",
@@ -88,7 +88,7 @@ function App() {
   return (
     <>
       <header className="fixed top-2 left-0 w-full h-12 flex justify-center z-10">
-        <nav className="flex flex-row justify-between items-center bg-white/80 backdrop-blur w-[520px] rounded-2xl border border-black">
+        <nav className="flex flex-row justify-between items-center bg-white/80 backdrop-blur w-[515px] rounded-2xl border border-black">
           {sections.map(({ name, id }) => (
             <a
               key={id}
@@ -121,14 +121,14 @@ function App() {
                 technology to create practical solutions from theoretical ideas.
                 When I’m not immersed in academics, you’ll find me on the tennis
                 court or working on projects that combine cutting-edge quantum
-                concepts with real-world applications. Scroll down to see what
-                I’ve been working on!
+                computing concepts with real-world applications. Scroll down to
+                see what I’ve been working on!
               </p>
             </div>
             <img
               src="/me.JPG"
               alt="Me"
-              className="w-96 rounded-xl shadow-lg shadow-black"
+              className="w-0 md:w-96 rounded-xl shadow-lg shadow-black"
             />
           </div>
         </section>
@@ -148,7 +148,7 @@ function App() {
             </div>
           </div>
           <div
-            className="bg-white h-[550px] rounded-xl flex flex-col gap-2 overflow-y-scroll snap-y snap-mandatory p-6 items-center scrollbar-hide border border-black"
+            className="bg-white h-[550px] rounded-xl flex flex-col gap-2 overflow-y-scroll snap-y snap-mandatory mr-2 p-6 items-center scrollbar-hide border border-black"
             style={{ scrollPaddingTop: "1rem" }}
           >
             {jobs.map(({ name, role, start, end, location, details }) => (
@@ -198,7 +198,9 @@ function App() {
           className="snap-start flex h-1/4 bg-gray-100 items-center"
         >
           <div className="flex items-center bg-white pt-6 pr-20 rounded-tr-full h-full">
-            <h1 className="text-4xl font-kumbh ml-10 min-w-56">Contact</h1>
+            <h1 className="text-4xl md:font-kumbh md:ml-10 md:min-w-56">
+              Contact
+            </h1>
             <div className="flex flex-row gap-4 w-full">
               <a
                 href="mailto:alexandreboutot@icloud.com"
