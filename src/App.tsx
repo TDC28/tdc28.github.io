@@ -7,7 +7,6 @@ const sections = [
   { name: "Home", id: "home" },
   { name: "Experience", id: "experience" },
   { name: "Projects", id: "projects" },
-  { name: "Publications", id: "publications" },
   { name: "Contact", id: "contact" },
 ];
 
@@ -43,15 +42,15 @@ const jobs = [
 const projects = [
   {
     name: "Qalendar",
-    details: "Somestuff",
+    details: "Calendar generator powered by quantum annealing.",
     link: "https://github.com/TDC28/Qalendar.git",
-    tools: ["Python", "TypeScript", "TailwindCSS", "Vite"],
+    tools: ["Python", "Django", "TypeScript", "TailwindCSS", "Vite"],
   },
   {
     name: "QuViz",
-    details: "Somestuff2",
+    details: "Neutral atom quantum computer compilation visualization tool.",
     link: "https://github.com/RasmitDevkota/QuViz.git",
-    tools: ["Python", "Qiskit", "tkinter"],
+    tools: ["Python", "Qiskit", "NumPy", "Tkinter"],
   },
 ];
 
@@ -194,44 +193,38 @@ function App() {
         </section>
 
         <section
-          id="publications"
-          ref={(el) => (sectionRefs.current[3] = el)}
-          className="section"
-        >
-          <h1 className="font-kumbh text-4xl">Publications</h1>
-        </section>
-
-        <section
           id="contact"
-          ref={(el) => (sectionRefs.current[4] = el)}
-          className="snap-start flex h-1/4 bg-gray-100 rounded-tl-3xl rounded-tr-full items-center w-2/3"
+          ref={(el) => (sectionRefs.current[3] = el)}
+          className="snap-start flex h-1/4 bg-gray-100 items-center"
         >
-          <h1 className="text-4xl font-kumbh ml-10 min-w-56">Contact</h1>
-          <div className="flex flex-row gap-4 w-full">
-            <a
-              href="mailto:alexandreboutot@icloud.com"
-              className="contact-link"
-            >
-              <div className="flex flex-row pt-2 pb-2">
-                <Mail className="mr-2" />
-                <p className="font-kumbh">Email</p>
-              </div>
-            </a>
-            <a href="https://github.com/TDC28" className="contact-link">
-              <div className="flex flex-row p-2">
-                <Github className="mr-2" />
-                <p className="font-kumbh">GitHub</p>
-              </div>
-            </a>
-            <a
-              href="https://linkedin.com/in/alexandreboutot"
-              className="contact-link"
-            >
-              <div className="flex flex-row p-2">
-                <Linkedin className="mr-2" />
-                <p className="font-kumbh">LinkedIn</p>
-              </div>
-            </a>
+          <div className="flex items-center bg-white pt-6 pr-20 rounded-tr-full h-full">
+            <h1 className="text-4xl font-kumbh ml-10 min-w-56">Contact</h1>
+            <div className="flex flex-row gap-4 w-full">
+              <a
+                href="mailto:alexandreboutot@icloud.com"
+                className="contact-link"
+              >
+                <div className="flex flex-row pt-2 pb-2">
+                  <Mail className="mr-2" />
+                  <p className="font-kumbh">Email</p>
+                </div>
+              </a>
+              <a href="https://github.com/TDC28" className="contact-link">
+                <div className="flex flex-row p-2">
+                  <Github className="mr-2" />
+                  <p className="font-kumbh">GitHub</p>
+                </div>
+              </a>
+              <a
+                href="https://linkedin.com/in/alexandreboutot"
+                className="contact-link"
+              >
+                <div className="flex flex-row p-2">
+                  <Linkedin className="mr-2" />
+                  <p className="font-kumbh">LinkedIn</p>
+                </div>
+              </a>
+            </div>
           </div>
         </section>
       </div>

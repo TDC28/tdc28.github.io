@@ -10,14 +10,12 @@ type ProjectProps = {
 
 const Project: React.FC<ProjectProps> = ({ name, details, link, tools }) => {
   return (
-    <div className="flex flex-col bg-white p-2 w-full h-52 shadow transition-all duration-100 gap-1 border rounded-2xl">
-      <h1 className="font-kumbh text-2xl">{name}</h1>
-      <p>{details}</p>
+    <div className="flex flex-col bg-white p-2 w-2/3 h-48 shadow transition-all duration-100 gap-2 border rounded-2xl justify-around self-center min-w-[362px]">
+      <h1 className="pl-1 font-kumbh text-2xl">{name}</h1>
+      <p className="relative bottom-3 pl-1 h-1/6 text-zinc-700">{details}</p>
       <div className="flex flex-row text-xs gap-2">
         {tools.map((tool) => (
-          <div className="rounded-xl bg-zinc-100 px-2 py-1 font-kumbh">
-            {tool}
-          </div>
+          <div className="rounded-xl bg-zinc-100 p-2 font-kumbh">{tool}</div>
         ))}
       </div>
       <a
