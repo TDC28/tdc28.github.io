@@ -200,7 +200,7 @@ function App() {
           ref={(el) => (sectionRefs.current[3] = el)}
           className="snap-start flex h-3/5 bg-gray-100 items-center"
         >
-          <div className="flex items-center bg-white pt-6 w-5/6  rounded-tr-[275px] h-full">
+          <div className="flex items-center bg-white w-full h-full">
             <h1 className="text-4xl font-kumbh ml-10 min-w-56">Contact</h1>
             <div className="flex flex-col md:flex-row gap-2 w-full">
               <div className="flex flex-col gap-2">
