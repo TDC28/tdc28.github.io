@@ -10,20 +10,25 @@ type ProjectProps = {
 
 const Project: React.FC<ProjectProps> = ({ name, details, link, tools }) => {
   return (
-    <div className="flex flex-col bg-white p-2 w-2/3 h-48 shadow transition-all duration-100 gap-2 border rounded-2xl justify-around self-center min-w-[362px]">
-      <h1 className="pl-1 font-kumbh text-2xl">{name}</h1>
-      <p className="relative bottom-3 pl-1 h-1/6 text-zinc-700">{details}</p>
-      <div className="flex flex-row text-xs gap-2">
-        {tools.map((tool) => (
-          <div className="rounded-xl bg-zinc-100 p-2 font-kumbh">{tool}</div>
+    <div className="flex flex-col bg-white p-4 w-full md:w-2/3 h-auto shadow transition-all duration-100 gap-4 border rounded-2xl justify-between self-center">
+      <h1 className="font-kumbh text-lg md:text-2xl">{name}</h1>
+      <p className="text-sm md:text-base text-zinc-700">{details}</p>
+      <div className="flex flex-wrap gap-2">
+        {tools.map((tool, index) => (
+          <div
+            key={index} // Added key for mapping
+            className="rounded-xl bg-zinc-100 px-4 py-1 font-kumbh text-xs md:text-sm"
+          >
+            {tool}
+          </div>
         ))}
       </div>
       <a
-        href="https://github.com/TDC28"
-        className="rounded-3xl w-28 flex justify-around items-center bg-white border border-black hover:shadow-lg transition-all duration-300"
+        href={link}
+        className="rounded-3xl w-full md:w-28 flex justify-center items-center bg-white border border-black hover:shadow-lg transition-all duration-300"
       >
-        <div className="flex flex-row p-1 items-center">
-          <Github className="mr-2 w-4" />
+        <div className="flex flex-row items-center gap-2 p-1">
+          <Github className="w-4" />
           <p className="font-kumbh text-sm">GitHub</p>
         </div>
       </a>

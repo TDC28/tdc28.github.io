@@ -108,15 +108,15 @@ function App() {
           ref={(el) => (sectionRefs.current[0] = el)}
           className="snap-start h-screen flex items-center bg-gray-100"
         >
-          <div className="flex flex-row w-full justify-around items-center">
-            <div className="flex flex-col p-4 max-w-[720px]">
-              <h1 className="text-7xl font-kumbh font-bold">
+          <div className="flex flex-col md:flex-row w-full justify-around items-center px-4">
+            <div className="flex flex-col p-4 max-w-full md:max-w-[720px] text-center md:text-left">
+              <h1 className="text-4xl md:text-7xl font-kumbh font-bold">
                 Alexandre Boutot
               </h1>
-              <p className="text-2xl font-kumbh">
+              <p className="text-lg md:text-2xl font-kumbh mt-2 md:mt-0">
                 Mathematical Physics Student at the University of Waterloo
               </p>
-              <p className="pt-4">
+              <p className="pt-4 text-sm md:text-base">
                 I’m passionate about exploring physics, mathematics, and
                 technology to create practical solutions from theoretical ideas.
                 When I’m not immersed in academics, you’ll find me on the tennis
@@ -128,7 +128,7 @@ function App() {
             <img
               src="/me.JPG"
               alt="Me"
-              className="w-0 md:w-96 rounded-xl shadow-lg shadow-black"
+              className="w-0 md:w-96 rounded-xl shadow-lg shadow-black mt-4 md:mt-0"
             />
           </div>
         </section>
@@ -136,23 +136,26 @@ function App() {
         <section
           id="experience"
           ref={(el) => (sectionRefs.current[1] = el)}
-          className="snap-start h-screen flex flex-row items-center justify-center bg-gray-100"
+          className="snap-start h-screen flex flex-col md:flex-row items-center justify-center bg-gray-100 px-4"
         >
-          <div className="flex w-1/3 items-center">
-            <div className="left-0 h-full flex flex-col items-center justify-center p-8">
-              <h1 className="font-kumbh text-4xl mb-2">Experience</h1>
-              <p className="max-w-96 text-center">
+          <div className="flex w-full md:w-1/3 items-center justify-center mb-4 md:mb-0">
+            <div className="h-full flex flex-col items-center justify-center p-4 md:p-8">
+              <h1 className="font-kumbh text-3xl md:text-4xl mb-2">
+                Experience
+              </h1>
+              <p className="text-center text-sm md:text-base">
                 Here is the work experience I gained since I started my journey
                 at Waterloo!
               </p>
             </div>
           </div>
           <div
-            className="bg-white h-[550px] rounded-xl flex flex-col gap-2 overflow-y-scroll snap-y snap-mandatory mr-2 p-6 items-center scrollbar-hide border border-black"
+            className="bg-white h-[400px] md:h-[550px] max-w-[750px] rounded-xl flex flex-col gap-2 overflow-y-scroll snap-y snap-mandatory p-4 md:p-6 items-center scrollbar-hide border border-black w-full md:w-2/3"
             style={{ scrollPaddingTop: "1rem" }}
           >
             {jobs.map(({ name, role, start, end, location, details }) => (
               <Job
+                key={name + start} // Added a key for list rendering
                 name={name}
                 role={role}
                 start={start}
@@ -167,28 +170,27 @@ function App() {
         <section
           id="projects"
           ref={(el) => (sectionRefs.current[2] = el)}
-          className="section bg-gray-100 rounded-2xl"
+          className="snap-start h-screen flex flex-col md:flex-row items-center justify-center bg-gray-100 px-4"
         >
-          <div className="flex w-1/3 items-center">
-            <div className="left-0 h-full flex flex-col items-center justify-center p-8">
-              <h1 className="font-kumbh text-4xl mb-2">Projects</h1>
-              <p className="max-w-96 text-center">
+          <div className="flex w-full md:w-1/3 items-center justify-center mb-4 md:mb-0">
+            <div className="flex flex-col items-center justify-center">
+              <h1 className="font-kumbh text-3xl md:text-4xl mb-2">Projects</h1>
+              <p className="text-center text-sm md:text-base">
                 Here are some of the things I have been working on recently.
               </p>
             </div>
           </div>
 
-          <div className="w-2/3 self-center">
-            <div className="flex flex-col gap-4 pr-10">
-              {projects.map(({ name, details, link, tools }) => (
-                <Project
-                  link={link}
-                  name={name}
-                  details={details}
-                  tools={tools}
-                />
-              ))}
-            </div>
+          <div className="w-full md:w-2/3 flex flex-col gap-4">
+            {projects.map(({ name, details, link, tools }) => (
+              <Project
+                key={name}
+                link={link}
+                name={name}
+                details={details}
+                tools={tools}
+              />
+            ))}
           </div>
         </section>
 
@@ -198,7 +200,7 @@ function App() {
           className="snap-start flex h-1/4 bg-gray-100 items-center"
         >
           <div className="flex items-center bg-white pt-6 pr-20 rounded-tr-full h-full">
-            <h1 className="text-4xl md:font-kumbh md:ml-10 md:min-w-56">
+            <h1 className="text-4xl font-kumbh md:ml-10 md:min-w-56">
               Contact
             </h1>
             <div className="flex flex-row gap-4 w-full">
