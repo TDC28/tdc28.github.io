@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Linkedin, Github, Mail } from "lucide-react";
+import { FileUser, Linkedin, Github, Mail } from "lucide-react";
 import Job from "./components/job";
 import Project from "./components/project";
 
@@ -155,7 +155,7 @@ function App() {
           >
             {jobs.map(({ name, role, start, end, location, details }) => (
               <Job
-                key={name + start} // Added a key for list rendering
+                key={name + start}
                 name={name}
                 role={role}
                 start={start}
@@ -173,7 +173,7 @@ function App() {
           className="snap-start h-screen flex flex-col md:flex-row items-center justify-center bg-gray-100 px-4"
         >
           <div className="flex w-full md:w-1/3 items-center justify-center mb-4 md:mb-0">
-            <div className="flex flex-col items-center justify-center">
+            <div className="h-full flex flex-col items-center justify-center p-4 md:p-8">
               <h1 className="font-kumbh text-3xl md:text-4xl mb-2">Projects</h1>
               <p className="text-center text-sm md:text-base">
                 Here are some of the things I have been working on recently.
@@ -181,7 +181,7 @@ function App() {
             </div>
           </div>
 
-          <div className="w-full md:w-2/3 flex flex-col gap-4">
+          <div className=" md:w-2/3 flex flex-col gap-4 max-w-[750px]">
             {projects.map(({ name, details, link, tools }) => (
               <Project
                 key={name}
@@ -200,34 +200,45 @@ function App() {
           className="snap-start flex h-1/4 bg-gray-100 items-center"
         >
           <div className="flex items-center bg-white pt-6 pr-20 rounded-tr-full h-full">
-            <h1 className="text-4xl font-kumbh md:ml-10 md:min-w-56">
-              Contact
-            </h1>
+            <h1 className="text-4xl font-kumbh ml-10 min-w-56">Contact</h1>
             <div className="flex flex-row gap-4 w-full">
-              <a
-                href="mailto:alexandreboutot@icloud.com"
-                className="contact-link"
-              >
-                <div className="flex flex-row pt-2 pb-2">
-                  <Mail className="mr-2" />
-                  <p className="font-kumbh">Email</p>
-                </div>
-              </a>
-              <a href="https://github.com/TDC28" className="contact-link">
-                <div className="flex flex-row p-2">
-                  <Github className="mr-2" />
-                  <p className="font-kumbh">GitHub</p>
-                </div>
-              </a>
-              <a
-                href="https://linkedin.com/in/alexandreboutot"
-                className="contact-link"
-              >
-                <div className="flex flex-row p-2">
-                  <Linkedin className="mr-2" />
-                  <p className="font-kumbh">LinkedIn</p>
-                </div>
-              </a>
+              <div className="flex flex-col gap-2">
+                <a
+                  href="mailto:alexandreboutot@icloud.com"
+                  className="contact-link"
+                >
+                  <div className="flex flex-row pt-2 pb-2">
+                    <Mail className="mr-2" />
+                    <p className="font-kumbh">Email</p>
+                  </div>
+                </a>
+                <a href="https://github.com/TDC28" className="contact-link">
+                  <div className="flex flex-row p-2">
+                    <Github className="mr-2" />
+                    <p className="font-kumbh">GitHub</p>
+                  </div>
+                </a>
+              </div>
+              <div className="flex flex-col gap-2">
+                <a
+                  href="https://linkedin.com/in/alexandreboutot"
+                  className="contact-link"
+                >
+                  <div className="flex flex-row p-2">
+                    <Linkedin className="mr-2" />
+                    <p className="font-kumbh">LinkedIn</p>
+                  </div>
+                </a>
+                <a
+                  href="https://linkedin.com/in/alexandreboutot"
+                  className="contact-link"
+                >
+                  <div className="flex flex-row p-2">
+                    <FileUser className="mr-2" />
+                    <p className="font-kumbh">Resume</p>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </section>
