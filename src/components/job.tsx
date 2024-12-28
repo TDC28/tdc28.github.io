@@ -20,7 +20,7 @@ const Job: React.FC<JobProps> = ({
   return (
     <div className="flex flex-row rounded-lg transition-all duration-200 p-2 w-full max-w-[700px] hover:bg-zinc-50">
       <div className="">
-        <p className="relative top-1 min-w-36 text-sm font-light font-kumbh text-center">
+        <p className="relative top-1 min-w-28 md:min-w-36 text-xs md:text-sm font-light font-kumbh text-center">
           {start} - {end}
         </p>
       </div>
