@@ -202,7 +202,7 @@ function App() {
         >
           <div className="flex items-center bg-white w-full h-full">
             <h1 className="text-4xl font-kumbh ml-10 min-w-56">Contact</h1>
-            <div className="flex flex-col md:flex-row gap-2 w-full mr-2">
+            <div className="flex flex-col md:flex-row gap-2 w-full items-center">
               <div className="flex flex-col gap-2">
                 <a
                   href="mailto:alexandreboutot@icloud.com"
