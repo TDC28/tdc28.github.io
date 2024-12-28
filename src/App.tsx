@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { FileUser, Linkedin, Github, Mail } from "lucide-react";
 import Job from "./components/job";
 import Project from "./components/project";
+import resume from "../public/resume.pdf";
 
 const sections = [
   { name: "Home", id: "home" },
@@ -197,9 +198,9 @@ function App() {
         <section
           id="contact"
           ref={(el) => (sectionRefs.current[3] = el)}
-          className="snap-start flex h-2/3 bg-gray-100 items-center"
+          className="snap-start flex h-3/5 bg-gray-100 items-center"
         >
-          <div className="flex items-center bg-white pt-6 w-5/6 min-w-[550px] rounded-tr-full h-full">
+          <div className="flex items-center bg-white pt-6 w-5/6  rounded-tr-[275px] h-full">
             <h1 className="text-4xl font-kumbh ml-10 min-w-56">Contact</h1>
             <div className="flex flex-col md:flex-row gap-2 w-full">
               <div className="flex flex-col gap-2">
@@ -229,10 +230,7 @@ function App() {
                     <p className="font-kumbh">LinkedIn</p>
                   </div>
                 </a>
-                <a
-                  href="https://linkedin.com/in/alexandreboutot"
-                  className="contact-link"
-                >
+                <a href={resume} target="_blank" className="contact-link">
                   <div className="flex flex-row p-2">
                     <FileUser className="mr-2" />
                     <p className="font-kumbh">Resume</p>
