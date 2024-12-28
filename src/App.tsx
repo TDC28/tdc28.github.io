@@ -88,7 +88,7 @@ function App() {
   return (
     <>
       <header className="fixed top-2 left-0 w-full h-12 flex justify-center z-10">
-        <nav className="flex flex-row justify-between items-center bg-white/80 backdrop-blur w-[515px] rounded-2xl border border-black">
+        <nav className="flex flex-row justify-between items-center bg-white/80 backdrop-blur w-[500px] rounded-2xl border border-black">
           {sections.map(({ name, id }) => (
             <a
               key={id}
@@ -197,11 +197,11 @@ function App() {
         <section
           id="contact"
           ref={(el) => (sectionRefs.current[3] = el)}
-          className="snap-start flex h-1/4 bg-gray-100 items-center"
+          className="snap-start flex h-2/3 bg-gray-100 items-center"
         >
-          <div className="flex items-center bg-white pt-6 pr-20 rounded-tr-full h-full">
+          <div className="flex items-center bg-white pt-6 w-5/6 min-w-[550px] rounded-tr-full h-full">
             <h1 className="text-4xl font-kumbh ml-10 min-w-56">Contact</h1>
-            <div className="flex flex-row gap-4 w-full">
+            <div className="flex flex-col md:flex-row gap-2 w-full">
               <div className="flex flex-col gap-2">
                 <a
                   href="mailto:alexandreboutot@icloud.com"
