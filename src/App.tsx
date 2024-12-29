@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { FileUser, Linkedin, Github, Mail } from "lucide-react";
 import Job from "./components/job";
 import Project from "./components/project";
-import resume from "../public/resume.pdf";
+import resume from "/resume.pdf";
 
 const sections = [
   { name: "Home", id: "home" },

@@ -25,11 +25,11 @@ const Job: React.FC<JobProps> = ({
         </p>
       </div>
       <div className="">
-        <h1 className="text-xl font-kumbh">
+        <h1 className="text-lg md:text-xl font-kumbh">
           {role} · {name}
         </h1>
-        <p className="font-kumbh pt-1 pb-1 text-lg">{location}</p>
-        <p className="text-md">{details}</p>
+        <p className="font-kumbh pt-1 pb-1 text-md md:text-lg">{location}</p>
+        <p className="text-sm md:text-md">{details}</p>
       </div>
     </div>
   );
